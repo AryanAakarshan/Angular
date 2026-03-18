@@ -13,5 +13,13 @@ export class App {
   age=22;
   hi="Tell me about it";
   int=0;
+  isadmin=true;
+  count = signal(0);
+  increment(){
+    this.count.update(val => val>9 ? 0 : val+1);
+  }
+  Decrement(){
+    this.count.update(val=>val>0?val-1:val=0);
+  }
   
 }
