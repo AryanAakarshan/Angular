@@ -1,0 +1,20 @@
+<p>login works!</p>
+
+<img [src]='imageUrl'/>
+<input type="text" [value]=name>
+<button [disabled]="isDisabled">Submit</button>
+
+<div [style.width.px]="boxWidth"></div>
+<div [style.background-color]="bGColor">Coloured box</div>
+
+<p [innerText]="'count:'+count()"></p>
+<button (click)="increment()">increase</button>
+
+<button (click)="showEvent($event)">showEvent</button><br>
+<input (input)="updateUser($event.target.value)">
+<p>Your name: {{username}}</p>
+
+<form (submit)="handleSubmit($event)">
+    <input placeholder="email">
+    <button>submit</button>
+</form>
