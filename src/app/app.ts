@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Form } from './form/form';
+import { SigninComponent } from './signin/signin';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Form],
+  imports: [RouterOutlet,Form,SigninComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
