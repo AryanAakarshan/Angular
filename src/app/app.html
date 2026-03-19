@@ -1,7 +1,19 @@
-<input (input)="onInput($event.target.value)" placeholder="Type your name">
-<p>Your Name: {{name}}</p>
-<input (input)="city=$event.target.value" placeholder="CityName">
-<p>Your city={{city}}</p>
-<input #userInput placeholder="Email">
-<button (click)="onClick(userInput.value)">Get Email</button>
-<p>Your Email:{{email}}</p>
+<button (click)="toggleBox()">toggle</button>
+@if(showBox){
+    <p>This box</p>
+}
+@else{
+    <p>is hidden</p>
+}
+<button (click)="selection='Home'">Home</button>
+<button (click)="selection='Profile'">Profile</button>
+<button (click)="selection='Contact'">Contact</button>
+@if(selection=='Home'){
+    <p>Welcome to Home Page</p>
+}
+@else if(selection=='Profile'){
+    <p>Welcome to Profile Page</p>
+}
+@else if(selection=='Contact'){
+    <p>Welcome to Contact Page</p>
+}

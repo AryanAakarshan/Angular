@@ -1,7 +1,5 @@
 div{width: 300px;
-  height: 200px;
+  height: 20px;
   border: 2px solid #b80505;
   background-color: aqua;
-  padding: 20px;
-  margin: 20px;
 }
