@@ -1,27 +1,35 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Form } from './form/form';
-import { Login } from './login/login';
+import { every } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Form,Login],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('angular-tutorial');
-  name="Aryan";
-  age=22;
-  hi="Tell me about it";
-  int=0;
-  isadmin=true;
-  count = signal(0);
-  increment(){
-    this.count.update(val => val>9 ? 0 : val+1);
+  name=signal("");
+  onInput(event:any){
+    this.name.set(event.target.value)
   }
-  Decrement(){
-    this.count.update(val=>val>0?val-1:val=0);
+  onclick(event:any){
+    this.name=event.target.value;
   }
-  
+  onKeyUp(event:any){
+    console.log("Key Pressed ",event.key);
+  }
+  onHover(){
+    console.log("Entered");
+  }
+  onLeave(){
+    console.log("Left");
+  }
+  onFocus(){
+    console.log("Focused");
+  }
+  onblur(){
+    console.log("Blured");
+  }
+
 }
