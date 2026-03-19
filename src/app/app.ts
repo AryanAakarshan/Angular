@@ -9,6 +9,16 @@ import { every } from 'rxjs';
   styleUrl: './app.css'
 })
 export class App {
-  
+  name:string="";
+  city:string="";
+  email:string="";
+
+  onInput(val:string){
+    this.name=val;
+  }
+  onClick(val:string){
+    console.log("clicked");
+    this.email=val;
+  }
 
 }
